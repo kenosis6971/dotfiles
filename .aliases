@@ -1,0 +1,138 @@
+alias	..	"cd .. ; pwd"
+alias	...	"cd ../.. ; pwd"
+alias	....	"cd ../../.. ; pwd"
+alias	A	'cd ~/Attic'
+alias	a	alias
+alias	ag	"alias | grep -i \!*"
+alias	cl	"cd \!* ; cls ; pwd ; ls -F"
+alias	cls	clear
+alias	cui	"J ; cd dc/web/consoleui"
+alias	cx	'cat >! ./xxx'
+alias	D	'cd ~/Downloads'
+alias	dt	'diff /tmp/\!$ ./\!$'
+alias	e	"~/eclipse/eclipse &"
+alias	ee	'env'
+alias	eg	"env | grep -i \!*"
+alias	eh	'history | grep \!*'
+alias	ep	'echo $PATH'
+alias	f1	'find . -type f -name \!* | xargs ls -1'
+alias	fd	'find . -type d -name "\!:1" -print'
+alias	ff	'find . -name \!* -print'
+alias	fl	'find . -type f -name \!* -ls'
+alias	fn	'find . -name'
+alias	g	grep
+alias	GA	"git status | grep -v sdk | grep 'modified:' | cut -d \: -f 2 | xargs git add"
+alias	ga	'git add'
+alias	gb	'git branch'
+alias	gc	'git commit'
+alias	gch	'grep -i \!* *.{c,cpp,h,cc,hh}'
+alias	gco	"git checkout"
+alias	gd	'git diff'
+alias	gdc	"git diff --cached"
+alias	gdno	"git diff --name-only"
+alias	gi	'egrep -i \!*'
+alias	gl	"git log \!*"
+alias	gl	'egrep -l \!*'
+alias	gl	'git log'
+alias	gp	"git pull"
+alias	GP	"git push"
+alias	gr	'egrep -r \!*'
+alias	grl	'egrep -rl \!*'
+alias	gs	'git status'
+alias	gv	'egrep -v \!*'
+alias	h	'history \!* 30'
+alias	hg	'history | grep \!*'
+alias	hh	history
+alias	hn	hostname
+alias	ip	'ifconfig | grep inet'
+alias	J	'cd ~/Projects'
+alias	j	jobs
+alias	k9	"kill -9 \!*"
+alias	KD	'killall -9 ddd'
+alias	KK	"killall \!*"
+alias	ko	'komodo >& /dev/null'
+alias	KV	'killall -9 vmware-view'
+alias	l	"ls -F"
+alias	L	less
+alias	la	"ls -aF"
+alias	ll	"ls -lF"
+alias	LL	"ls -laF"
+alias	m	make
+alias	M	more
+alias	mc	'make clean'
+alias	mcd	"mkdir -p \!* ; cd \!*"
+alias	mcd	'mkdir \!* && cd \!*'
+alias	mcm	'make clean ; make \!*'
+alias	md	'mkdir -p \!* ; cd \!*'
+alias	me	'chown -R khilton \!*'
+alias	mx	'make >& ./xxx'
+alias	nl	'nc localhost \!*'
+alias	nul	'cat /dev/null >! \!*'
+alias	P	popd
+alias	p	pushd
+alias	path	"eg PATH"
+alias	pg	"git diff >! /tmp/patch.diff"
+alias	pg	"ps aux | grep -i \!* | grep -v grep"
+alias	pub	"scp ./cuipub.tgz ken@gmdev:/tmp"
+alias	pv	'ps auxxx | grep vmware-view | grep -v grep'
+alias	r	ruby
+alias	re	rehash
+alias	re	rehash
+alias	rgrep	find . -name "\!:2" -exec egrep \!:1 "{}" "\;"
+alias	rig	find . -name "\!:2" -exec egrep -il \!:1 "{}" "\;"
+alias	rlg	find . -name "\!:2" -exec egrep -l \!:1 "{}" "\;"
+alias	rmv	'mv \!* \!*.xxx ; rm -rf \!*.xxx &'
+alias	rr	'rm -rf'
+alias	rui	"J ; cd dc/web/consoleui_react"
+alias	rw	"chmod +rw"
+alias	rx	'rm ./xxx'
+alias	SA	"(cat ~/.aliases | sort -f > /tmp/.aliases) && (cp ~/.aliases ~/.aliases.old ; cp /tmp/.aliases ~/.aliases)"
+alias	sa	source "~/.aliases"
+alias	sc	source "~/.tcshrc ; rehash"
+alias	sd	'sudo -s'
+alias	se	"source ~/.env ; rehash"
+alias	sg	"ssh -l ken gmdev"
+alias	t	'cp \!* /tmp'
+alias	to	touch	
+alias	dots	'pushd ~ ; tar cvzf /tmp/dots.tgz ./.{aliases,env,tcshrc,bashrc} ; popd'
+alias	tf	'tail -f \!*'
+alias	tmp	'cp \!* /tmp'
+alias	tn	'telnet localhost \!*'
+alias   v	vim
+alias	va	vi "~/.aliases"
+alias	vb	vi "~/.bash_aliases ~/.bashrc"
+alias	vc	vi "~/.tcshrc"
+alias	ve	vi "~/.env"
+alias	vf	'vi `find . -name \!*`'
+alias	vg	"vi .gitignore"
+alias	vm	"vi makefile"
+alias	vt	vi "~/.tcshrc"
+alias	vv	'vi ~/.vimrc'
+alias	vx	"vi ./xxx"
+alias	ws	'wireshark \!* &'
+alias	x	'chmod +x \!*'
+alias	X	'chmod -x \!*'
+alias	xi	xwininfo
+alias	xx	'vi /tmp/xxx'
+alias	z	bg
+alias	Z	fg
+alias	dc	"J ; cd ./dc"
+alias	sdk	"J ; cd ./darkcycle"
+alias	sap	"J ; cd ./sampleapp"
+alias	rsdc	'rsync -az --delete --exclude .git -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress \!:1 $CONSOLEUIDEST'
+alias	bthrift './bootstrap.sh ; ./configure --prefix=/usr/local/ --with-cpp --with-java --with-go --with-python; make -j9'
+alias	egp	'echo $GOPATH'
+#alias	sgp	'setenv GOPATH /home/khilton/Projects/go'
+#alias	sgp	'setenv GOPATH /home/khilton/Projects/go:/home/khilton/Projects/\!:1'
+alias	sgp	'setenv GOPATH /home/khilton/Projects/\!:1'
+alias	gf	'git fetch'
+alias	newdc	'git clone -b dev ssh://git@stash.geneticfinance.com:7999/dc/dc.git'
+alias	newsa	'git clone ssh://git@stash.geneticfinance.com:7999/dc/sampleapp.git'
+alias	newsdk	'git clone git@github.com:SentientTechnologies/darkcycle.git'
+alias	newth	'git clone https://github.com/SentientTechnologies/thrift'
+alias	if	ifconfig
+alias	mdc	'dc ; gp ; make clean && make && (cd .. ; rsdc dc)'
+alias	ss	'sudo -s'
+alias	vi	vim
+alias	gss 'git stash save'
+alias	gsa 'git stash apply'

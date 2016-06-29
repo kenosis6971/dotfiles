@@ -1,0 +1,27 @@
+# The contents of this file are executed at startup of csh.exe
+
+source ~/.env
+
+set TCSHRC="~/.tcshrc"
+set nonomatch
+set filec
+set history=500
+set savehist=500
+set autolist=1
+set nohup=1
+set hostname=`hostname`
+
+# Determine terminal type so things like irb work properly.
+#tset
+
+limit coredumpsize 4000000000
+
+if (`whoami` == "root") then
+set prompt="\
+(root) $hostname-\!> " 
+else
+set prompt="\
+\$hostname-!> " 
+endif
+
+source ~/.aliases
